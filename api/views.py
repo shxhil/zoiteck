@@ -29,8 +29,8 @@ class ProfileViewset(viewsets.ViewSet):
     permission_classes=[permissions.IsAuthenticated]
 
     def update(self,request,*args,**kwargs):
-        u_obj=request.user.profile
-        serializer=ProfileSerializer(data=request.data,instance=u_obj)
+        user_obj=request.user.profile
+        serializer=ProfileSerializer(data=request.data,instance=user_obj)
         if serializer.is_valid():
             serializer.save(user=request.user)
             return Response(data=serializer.data)
