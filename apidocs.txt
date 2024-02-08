@@ -1,0 +1,19 @@
+1.api for registering a new user
+   
+    url:http://127.0.0.1:8000/api/register/
+    method:post
+    data:{username,email,password}
+    authorization:nill
+
+2. token authentication
+    url:http://127.0.0.1:8000/api/token/
+    method:post
+    data:{username,password}
+    authorization:token
+
+3.profile updtion
+    url:http://127.0.0.1:8000/api/profile/{id}/
+    method:post
+    data:{user,about,dob,profile,gender}
+    authorization:token
+
